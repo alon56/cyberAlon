@@ -175,6 +175,7 @@ def main():
                 encrypted_msg = f.read()
             print(msg_cipher.decrypt(encrypted_msg))
         except FileNotFoundError:
+            logger.info("file wasn't created")
             print("There was nothing to decrypt(file was empty)")
         
 

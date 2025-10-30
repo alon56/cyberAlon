@@ -5,7 +5,7 @@ logging.basicConfig(
     level=logging.INFO,
     format=('%(asctime)s - %(levelname)s - %(message)s'),
     handlers=[
-        logging.FileHandler("log.file")
+        logging.FileHandler("client_log.file")
     ]
 )
 

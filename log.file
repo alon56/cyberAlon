@@ -72,3 +72,14 @@
 2025-10-30 21:46:51,700 - INFO - Invalid command
 2025-10-30 21:46:56,277 - INFO - Removing connection
 2025-10-30 21:46:56,277 - INFO - closing server socket
+2025-10-30 21:52:48,311 - INFO - Starting communication
+2025-10-30 21:52:59,180 - INFO - connection succeeded
+2025-10-30 21:58:01,642 - INFO - closing server socket
+2025-10-30 21:58:04,500 - INFO - Starting communication
+2025-10-30 21:58:14,170 - INFO - client connected susccfully
+2025-10-30 21:58:14,170 - INFO - server connection succeeded
+2025-10-30 21:58:16,741 - INFO - Sending server name
+2025-10-30 21:58:19,007 - INFO - Sending time
+2025-10-30 21:58:20,443 - INFO - Sending Random number
+2025-10-30 21:58:22,913 - ERROR - Client closed connection
+2025-10-30 21:58:22,913 - INFO - closing server socket

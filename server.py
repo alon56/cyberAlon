@@ -8,7 +8,7 @@ logging.basicConfig(
     level=logging.INFO,
     format=('%(asctime)s - %(levelname)s - %(message)s'),
     handlers=[
-        logging.FileHandler("log.file")
+        logging.FileHandler("server_log.file")
     ]
 )
 
@@ -35,7 +35,7 @@ def handle_client(client_socket:socket.socket, client_address:tuple):
                 logging.info("Sending Random number")
                 client_socket.send(str(random.randint(1,10)).encode())
             elif command == 'EXIT':
-                logging.info("Removing connection")
+                logging.error("Client closed connection")
                 client_socket.send('GoodBye!'.encode())
                 break
             else:
@@ -54,10 +54,10 @@ def start_server():
         server_socket.bind((HOST, PORT))
         server_socket.listen(QUEUE_LINE)
         client_socket, client_address = server_socket.accept()
-        logging.info("connection succeeded")
+        logging.info("server connection succeeded")
         handle_client(client_socket, client_address)
     except socket.error as msg:
-        logging.info("Connection failed")
+        logging.info("server Connection failed")
         print('received socket error ' + str(msg))
     finally:
         logging.info("closing server socket")
